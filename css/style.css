@@ -753,3 +753,22 @@ input {
     height: 50vh;
   }
 }
+
+#section3 {
+  text-align: center;
+}
+
+.blog-content .dbox-donation-button {
+  margin: 0 auto;
+  /* centers block element inside parent */
+  display: block;
+  /* ensures centering works properly */
+}
+
+.header-content {
+  text-align: center;
+}
+
+.donate-button-wrapper {
+  text-align: center;
+}
