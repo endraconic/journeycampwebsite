@@ -219,7 +219,7 @@ ul#menu {
 
 .blog-content p {
   padding: 27px;
-  text-align: left;
+  text-align: center;
   color: #333333;
 }
 
@@ -551,7 +551,7 @@ input {
   }
 
   .blog-content span {
-    margin-left: 0;
+    margin-center: 0;
   }
 
   .service>p {
