@@ -271,14 +271,15 @@ section#services-area {
 .service h1 {
   color: hsl(75, 11%, 93%);
   text-transform: capitalize;
-  text-shadow: 2px 2px #a0a89f;
+  text-shadow: 0 0 3px #1d1e1c;
   margin-bottom: 20px;
 }
 
 .service>p {
   color: hsl(75, 11%, 93%);
   font-size: 22px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  text-shadow: 0 0 3px #1d1e1c;
 }
 
 /* End Services CSS */
