@@ -803,3 +803,13 @@ input {
   display: block;
   max-width: 100%;
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
