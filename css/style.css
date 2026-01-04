@@ -242,10 +242,6 @@ ul#menu {
   background: #E6E6E6 none repeat scroll 0 0;
 }
 
-.blog-content>p#blofr {
-  padding: 8px;
-}
-
 /* End Blog CSS */
 
 /* Start Services CSS */
@@ -451,6 +447,82 @@ input {
   padding: 30px;
 }
 
+/* Crop the hero image inside .tm-box to make it slightly taller and anchor from the bottom */
+.tm-box .img-responsive.crop-top {
+  width: 100%;
+  height: 260px;
+  /* slightly taller crop */
+  object-fit: cover;
+  object-position: bottom;
+  /* anchor crop from the bottom */
+  display: block;
+}
+
+/* Add extra space below the intro paragraph in Notes for Parents only */
+.tm-box-p.notes-intro {
+  margin-bottom: 30px;
+}
+
+/* Notes for Parents section: left-align header and paragraph, right-align signature */
+
+@media only screen and (max-width: 767px) {
+  .tm-box .img-responsive.crop-top {
+    height: 190px;
+    /* slightly taller on mobile */
+  }
+
+  .tm-box-p.notes-intro {
+    margin-bottom: 20px;
+  }
+}
+
+.tm-box-description.notes-for-parents h2 {
+  text-align: center;
+}
+
+.tm-box-description.notes-for-parents p {
+  text-align: left;
+}
+
+.tm-box-description.notes-for-parents .notes-body {
+  text-indent: 2em;
+}
+
+.tm-box-description.notes-for-parents .notes-alert {
+  text-indent: 0;
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Ensure <strong> inside the alert isn't bold */
+.tm-box-description.notes-for-parents .notes-alert strong {
+  font-weight: 400;
+}
+
+.tm-box-description.notes-for-parents .notes-signature {
+  text-align: right;
+  margin: 0;
+  /* remove default h2 margins inside this section */
+}
+
+/* Make the 'Good wishes' text non-bold, slightly smaller, and tighten spacing */
+.tm-box-description.notes-for-parents .notes-signature .signature-wishes {
+  font-weight: 400;
+  /* normal */
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+/* Ensure the name sits close below and remains bold */
+.tm-box-description.notes-for-parents .notes-signature .signature-name {
+  display: block;
+  font-weight: 700;
+}
+
 .tm-box-p {
   margin-bottom: 10px;
 }
@@ -534,9 +606,6 @@ input {
 ----------------------*/
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .blog-content>p#blofr {
-    padding: 18px;
-  }
 
   .contact-content p {
     font-size: 100px;
@@ -759,6 +828,35 @@ input {
   text-align: center;
 }
 
+/* Notes-only: narrow and center the content in section3 so text sits closer to center and away from screen edges */
+.notes-section3 .section3-inner {
+  max-width: 820px;
+  /* narrower column */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+/* Keep headings centered but paragraphs left-aligned within this centered column */
+.notes-section3 .section3-inner .notes-body {
+  text-align: left;
+}
+
+/* Indent the first line of every paragraph in section3 (notes-only) */
+.notes-section3 .section3-inner p {
+  text-indent: 2em;
+}
+}
+
+@media only screen and (max-width: 767px) {
+  .notes-section3 .section3-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .blog-content .dbox-donation-button {
   margin: 0 auto;
   /* centers block element inside parent */
@@ -770,7 +868,28 @@ input {
   text-align: center;
 }
 
-.donate-button-wrapper {
+/* Make the donation columns equal height and keep the donate button at the bottom */
+#blog-area #section2>.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  /* make children equal height */
+}
+
+#blog-area #section2 .col-sm-6 {
+  display: flex;
+  /* let column stretch and contain a flex child */
+}
+
+#blog-area #section2 .blog-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#blog-area #section2 .donate-button-wrapper {
+  margin-top: auto;
+  /* push the button to the bottom */
   text-align: center;
 }
 
