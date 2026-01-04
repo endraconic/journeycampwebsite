@@ -309,7 +309,7 @@ http://www.templatemo.com/tm-476-conquer
             $('.single-page-nav').singlePageNav({
                 offset: $('.single-page-nav').outerHeight(),
                 speed: 1500,
-                filter: ':not(.external)',
+                filter: 'a[href^="#"]',
                 updateHash: true
             });
 
