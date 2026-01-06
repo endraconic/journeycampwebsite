@@ -488,6 +488,11 @@ input {
   text-indent: 2em;
 }
 
+/* Remove text-indent when paragraph is centered */
+.tm-box-description.notes-for-parents p.text-center {
+  text-indent: 0;
+}
+
 .tm-box-description.notes-for-parents .notes-alert {
   text-indent: 0;
   color: #333333;
